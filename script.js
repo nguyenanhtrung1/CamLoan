@@ -5,7 +5,7 @@ const questions = [
     { question: 'Ai là người yêu Cẩm Loan?', answers: ['Anh Trung', 'Bồ nhí', 'Lê Ân'], correctAnswer: 'Anh Trung' },
     { question: 'Người yêu làm mất cái lắc tay ngiu tặng anh rồi đúng không?', answers: ['Yupp', 'Yes', 'No'], correctAnswer: 'Yes' },
     { question: 'Anh có bao dung với người yêu không?', answers: ['Có', 'Có nhiều', 'Không'], correctAnswer: 'Có nhiều' },
-    { question: 'Sở thích lớn nhất của Cẩm Loan là gì?', answers: ['Đọc sách', 'Xem phim', 'Nghe nhạc'], correctAnswer: 'Đọc sách' },
+    { question: 'Sở thích lớn nhất của người yêu đối vơi anh là gì?', answers: ['Ôm', 'Hôn', 'Bóp tay'], correctAnswer: 'Bóp tay' },
     { question: 'Người yêu có hay bắt nạt anh không?', answers: ['Có', 'Có nhiều', 'Không'], correctAnswer: 'Có nhiều' },
     { question: 'Anh có đối xử tệ bạc với người yêu không?', answers: ['Có', 'Rất không', 'Không'], correctAnswer: 'Rất không' },
     { question: 'Khi anh bị dận người yêu suy nghĩ như nào?', answers: ['Ghét', 'Ghét yêu', 'Trức'], correctAnswer: 'Ghét yêu' },
