@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kỉ niệm 6 tháng</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Kỉ niệm 6 tháng</h1>
+        </header>
+        <main>
+            <section id="message">
+                <h2>Chúc mừng 6 tháng yêu nhau, Người yêu</h2>
+                <p>Nhân dịp kỉ niệm anh có làm gọi là trò chơi có thưởng cho ngiu ạ <3 </p>
+            </section>
+            <section id="puzzle">
+                <h3>Câu đố:</h3>
+                <div id="questions-container">
+                    <!-- Questions will be dynamically added here -->
+                </div>
+                <button id="check-answers-btn">Kiểm tra câu trả lời</button>
+                <p id="answer-feedback"></p>
+            </section>
+            <section id="prize">
+                <h3>Quay thưởng:</h3>
+                <div id="wheel-container">
+                    <canvas id="wheel" width="400" height="400"></canvas>
+                </div>
+                <button id="spin-wheel-btn" disabled>Quay thưởng</button>
+                <p id="spin-result"></p>
+            </section>
+            <section id="image">
+                <img src="heart.png" alt="Heart">
+            </section>
+        </main>
+        <footer>
+            <p>Cảm ơn người yêu rất nhiều trong 6 tháng qua phải chịu đựng anh ạ</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
