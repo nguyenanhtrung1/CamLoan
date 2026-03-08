@@ -1,45 +1,919 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kỉ niệm 6 tháng</title>
-    <link rel="stylesheet" type="text/css" href="./style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>8/3 dành cho em yêu 💗</title>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&family=Playfair+Display:wght@700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Animate.css -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+  <style>
+    :root {
+      --pink-1: #fff5f8;
+      --pink-2: #ffe7ef;
+      --pink-3: #ffd3e1;
+      --pink-4: #ffb6cc;
+      --pink-5: #ff7fa8;
+      --white: #ffffff;
+      --text: #6f4c5f;
+      --text-soft: #8c6b7b;
+      --shadow: 0 18px 50px rgba(255, 127, 168, 0.15);
+      --radius-xl: 28px;
+      --radius-lg: 22px;
+      --radius-md: 18px;
+      --max-width: 1120px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Be Vietnam Pro", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, #ffe3ed 0%, transparent 28%),
+        radial-gradient(circle at bottom right, #ffdbe8 0%, transparent 28%),
+        linear-gradient(180deg, #fff9fb 0%, #fff0f5 100%);
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      filter: blur(40px);
+      opacity: 0.45;
+      z-index: -2;
+    }
+
+    body::before {
+      top: -100px;
+      left: -80px;
+      background: #ffd4e3;
+    }
+
+    body::after {
+      right: -80px;
+      bottom: -120px;
+      background: #ffe0ee;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .container {
+      width: min(var(--max-width), calc(100% - 28px));
+      margin: 0 auto;
+      padding-bottom: 50px;
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      box-shadow: var(--shadow);
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 28px 0 12px;
+    }
+
+    .hero-card {
+      width: 100%;
+      border-radius: 34px;
+      padding: 30px 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "❤";
+      position: absolute;
+      top: 18px;
+      right: 22px;
+      font-size: 1.4rem;
+      opacity: 0.18;
+      transform: rotate(12deg);
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: rgba(255, 214, 228, 0.68);
+      color: #c85684;
+      font-weight: 700;
+      font-size: 0.95rem;
+      margin-bottom: 18px;
+    }
+
+    .tag::before {
+      content: "🌷";
+    }
+
+    .hero-title {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2.35rem, 7vw, 4.8rem);
+      line-height: 1.08;
+      margin-bottom: 18px;
+      color: #b6547d;
+    }
+
+    .typing-wrap {
+      min-height: 72px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 12px;
+    }
+
+    .typing-text {
+      font-size: clamp(1.05rem, 2.6vw, 1.35rem);
+      max-width: 780px;
+      color: var(--text-soft);
+      font-weight: 500;
+    }
+
+    .cursor {
+      display: inline-block;
+      margin-left: 4px;
+      color: var(--pink-5);
+      animation: blink 0.8s infinite;
+      font-weight: 800;
+    }
+
+    @keyframes blink {
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0; }
+    }
+
+    .hero-desc {
+      max-width: 760px;
+      margin: 0 auto 24px;
+      font-size: 1rem;
+      line-height: 1.8;
+      color: var(--text-soft);
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn {
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 700;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #ff9dbb, #ff7fa8);
+      color: #fff;
+      box-shadow: 0 12px 24px rgba(255, 127, 168, 0.28);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.85);
+      color: #b4557e;
+      border: 1px solid rgba(255, 183, 206, 0.8);
+    }
+
+    .section {
+      margin-top: 26px;
+    }
+
+    .section-card {
+      border-radius: var(--radius-xl);
+      padding: 26px 18px;
+    }
+
+    .section-head {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .section-badge {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(255, 221, 232, 0.72);
+      color: #cd5c86;
+      font-size: 0.92rem;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    .section-title {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(1.8rem, 4.8vw, 3rem);
+      color: #b7557f;
+      margin-bottom: 10px;
+    }
+
+    .section-desc {
+      max-width: 760px;
+      margin: 0 auto;
+      color: var(--text-soft);
+      line-height: 1.8;
+    }
+
+    .counter-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .counter-card {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(255, 241, 246, 0.96));
+      border: 1px solid rgba(255, 216, 228, 0.9);
+      border-radius: var(--radius-lg);
+      padding: 22px 14px;
+      text-align: center;
+      box-shadow: 0 12px 30px rgba(255, 145, 181, 0.08);
+    }
+
+    .counter-number {
+      font-size: clamp(2rem, 6vw, 3.1rem);
+      font-weight: 800;
+      color: #ff6d9d;
+      margin-bottom: 8px;
+      line-height: 1;
+    }
+
+    .counter-label {
+      font-size: 0.98rem;
+      color: var(--text-soft);
+      font-weight: 600;
+    }
+
+    .counter-note {
+      text-align: center;
+      margin-top: 16px;
+      color: var(--text-soft);
+      font-size: 0.98rem;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 22px;
+      aspect-ratio: 4 / 5;
+      box-shadow: 0 14px 30px rgba(255, 150, 185, 0.12);
+      border: 1px solid rgba(255, 225, 234, 0.9);
+      background: #fff;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.08);
+    }
+
+    .gallery-caption {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 14px 12px;
+      font-size: 0.9rem;
+      color: #fff;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(161, 78, 112, 0.72));
+      line-height: 1.45;
+    }
+
+    .wish-card {
+      text-align: center;
+    }
+
+    .wish-button {
+      margin-top: 8px;
+      min-width: 230px;
+    }
+
+    .wish-message {
+      display: none;
+      margin-top: 22px;
+      padding: 22px 18px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(255, 242, 247, 0.98));
+      border: 1px solid rgba(255, 220, 231, 0.95);
+      box-shadow: 0 16px 35px rgba(255, 126, 167, 0.1);
+    }
+
+    .wish-message.show {
+      display: block;
+    }
+
+    .wish-message h3 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(1.5rem, 4vw, 2.2rem);
+      color: #c15480;
+      margin-bottom: 14px;
+    }
+
+    .wish-message p {
+      color: var(--text-soft);
+      line-height: 1.9;
+      font-size: 1rem;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .wish-message p + p {
+      margin-top: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 18px 0 8px;
+      color: #b07891;
+      font-size: 0.95rem;
+    }
+
+    /* Floating hearts */
+    .heart {
+      position: fixed;
+      bottom: -40px;
+      z-index: 999;
+      pointer-events: none;
+      animation: flyUp linear forwards;
+      will-change: transform, opacity;
+      filter: drop-shadow(0 6px 10px rgba(255, 127, 168, 0.22));
+    }
+
+    @keyframes flyUp {
+      0% {
+        transform: translateY(0) translateX(0) scale(0.8) rotate(0deg);
+        opacity: 0;
+      }
+      15% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-115vh) translateX(var(--x-move, 0px)) scale(1.5) rotate(320deg);
+        opacity: 0;
+      }
+    }
+
+    #fireworksCanvas {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 998;
+    }
+
+    .reveal {
+      opacity: 0;
+    }
+
+    .reveal.show {
+      opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+      .hero-card,
+      .section-card {
+        padding: 22px 16px;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-top: 20px;
+      }
+
+      .typing-wrap {
+        min-height: 86px;
+      }
+
+      .counter-grid {
+        gap: 12px;
+      }
+
+      .counter-card {
+        padding: 18px 10px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .container {
+        width: min(100% - 20px, var(--max-width));
+      }
+
+      .counter-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero-title {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Kỉ niệm 6 tháng</h1>
-        </header>
-        <main>
-            <section id="message">
-                <h2>Chúc mừng 6 tháng yêu nhau, Người yêu</h2>
-                <p>Nhân dịp kỉ niệm anh có làm gọi là trò chơi có thưởng cho ngiu ạ <3 </p>
-            </section>
-            <section id="puzzle">
-                <h3>Câu đố:</h3>
-                <div id="questions-container">
-                    <!-- Questions will be dynamically added here -->
-                </div>
-                <button id="check-answers-btn">Kiểm tra câu trả lời</button>
-                <p id="answer-feedback"></p>
-            </section>
-            <section id="prize">
-                <h3>Quay thưởng:</h3>
-                <div id="wheel-container">
-                    <canvas id="wheel" width="400" height="400"></canvas>
-                </div>
-                <button id="spin-wheel-btn" disabled>Quay thưởng</button>
-                <p id="spin-result"></p>
-            </section>
-            <section id="image">
-                <img src="heart.png" alt="Heart">
-            </section>
-        </main>
-        <footer>
-            <p>Cảm ơn người yêu rất nhiều trong 6 tháng qua phải chịu đựng anh ạ</p>
-        </footer>
-    </div>
-    <script src="script.js"></script>
+  <canvas id="fireworksCanvas"></canvas>
+
+  <div class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-card glass-card animate__animated animate__fadeInUp">
+        <span class="tag">Một món quà nhỏ dành riêng cho em</span>
+        <h1 class="hero-title">Chúc mừng 8/3, cô gái anh thương nhất 💗</h1>
+
+        <div class="typing-wrap">
+          <p class="typing-text">
+            <span id="typedText"></span><span class="cursor">|</span>
+          </p>
+        </div>
+
+        <p class="hero-desc">
+          Cảm ơn em vì đã xuất hiện trong cuộc đời anh, mang đến thật nhiều dịu dàng,
+          niềm vui và những khoảnh khắc khiến trái tim anh luôn thấy bình yên.
+          Hôm nay là ngày đặc biệt, và em chính là điều đặc biệt nhất.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#love-counter" class="btn btn-primary">Xem chúng ta đã yêu nhau bao lâu</a>
+          <a href="#gallery" class="btn btn-secondary">Ngắm lại những kỷ niệm đẹp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOVE COUNTER -->
+    <section id="love-counter" class="section reveal">
+      <div class="section-card glass-card">
+        <div class="section-head">
+          <span class="section-badge">Từ ngày đầu tiên mình thuộc về nhau</span>
+          <h2 class="section-title">Chúng ta đã yêu nhau được</h2>
+          <p class="section-desc">
+            Mỗi ngày trôi qua đều là một điều đáng nhớ. Càng đi cùng nhau,
+            anh càng trân trọng em hơn.
+          </p>
+        </div>
+
+        <div class="counter-grid">
+          <div class="counter-card">
+            <div class="counter-number" id="years">0</div>
+            <div class="counter-label">Năm</div>
+          </div>
+          <div class="counter-card">
+            <div class="counter-number" id="months">0</div>
+            <div class="counter-label">Tháng</div>
+          </div>
+          <div class="counter-card">
+            <div class="counter-number" id="days">0</div>
+            <div class="counter-label">Ngày</div>
+          </div>
+        </div>
+
+        <p class="counter-note">
+          Mốc bắt đầu của chúng ta: <strong id="startDateText"></strong>
+        </p>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="section reveal">
+      <div class="section-card glass-card">
+        <div class="section-head">
+          <span class="section-badge">Bộ sưu tập kỷ niệm</span>
+          <h2 class="section-title">Những khoảnh khắc anh muốn giữ mãi</h2>
+          <p class="section-desc">
+            Có những bức ảnh không chỉ lưu lại hình ảnh, mà còn giữ lại cả cảm xúc,
+            tiếng cười và sự dịu dàng của em trong từng khoảnh khắc.
+          </p>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid"></div>
+      </div>
+    </section>
+
+    <!-- WISH / SURPRISE -->
+    <section class="section reveal">
+      <div class="section-card glass-card wish-card">
+        <div class="section-head">
+          <span class="section-badge">Một bất ngờ nho nhỏ</span>
+          <h2 class="section-title">Bấm thử vào nút này nhé ✨</h2>
+          <p class="section-desc">
+            Anh có điều muốn nói với em trong ngày 8/3 đặc biệt này.
+          </p>
+        </div>
+
+        <button id="surpriseBtn" class="btn btn-primary wish-button">
+          Nhấn vào đây nè 💌
+        </button>
+
+        <div id="wishMessage" class="wish-message">
+          <h3>Chúc mừng ngày Quốc tế Phụ nữ 8/3, em yêu 🌷</h3>
+          <p>
+            Chúc em luôn xinh đẹp, vui vẻ, dịu dàng và hạnh phúc không chỉ hôm nay
+            mà trong tất cả những ngày sau này. Cảm ơn em vì đã là em —
+            một cô gái tuyệt vời, ấm áp và đáng yêu theo cách riêng nhất.
+          </p>
+          <p>
+            Mong rằng anh sẽ luôn là người có thể ở bên cạnh, chở che, lắng nghe,
+            cùng em đi qua mọi niềm vui và cả những ngày mệt mỏi. Anh yêu em rất nhiều. 💖
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    /* =========================
+       1) CẤU HÌNH CHỈNH SỬA
+    ========================== */
+
+    // Đổi tên nếu muốn hiển thị riêng cho người ấy
+    const partnerName = "em yêu";
+
+    // Đổi ngày bắt đầu yêu nhau tại đây: YYYY-MM-DDTHH:mm:ss
+    const loveStartDate = new Date("2023-12-31T00:00:00");
+
+    // Các câu chữ chạy
+    const typingMessages = [
+      `Gửi ${partnerName}, cảm ơn em vì đã đến bên anh...`,
+      "Em là điều dịu dàng nhất mà cuộc sống đã tặng cho anh.",
+      "Chúc em một ngày 8/3 thật ngọt ngào, thật rực rỡ và thật hạnh phúc.",
+      "Mỗi khoảnh khắc bên em đều là một điều anh muốn giữ mãi."
+    ];
+
+    // Ảnh gallery
+    // Bạn có thể thay src bằng ảnh thật của hai bạn
+    const galleryImages = [
+      {
+        src: "1.jpg",
+        caption: "Nụ cười của em luôn làm ngày của anh trở nên dịu dàng hơn"
+      },
+      {
+        src: "3.jpg",
+        caption: "Chỉ cần có em, mọi thứ quanh anh đều trở nên đặc biệt"
+      },
+      {
+        src: "4.jpg",
+        caption: "Cảm ơn em vì đã làm trái tim anh luôn thấy ấm áp"
+      },
+      {
+        src: "5.jpg",
+        caption: "Anh mong chúng ta sẽ còn cùng nhau tạo ra thật nhiều điều đẹp đẽ nữa"
+      }
+    ];
+
+    /* =========================
+       2) HIỆU ỨNG CHỮ CHẠY
+    ========================== */
+    const typedText = document.getElementById("typedText");
+    let textIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function runTypingEffect() {
+      const currentText = typingMessages[textIndex];
+      typedText.textContent = currentText.slice(0, charIndex);
+
+      let speed = isDeleting ? 40 : 75;
+
+      if (!isDeleting && charIndex < currentText.length) {
+        charIndex++;
+      } else if (!isDeleting && charIndex === currentText.length) {
+        isDeleting = true;
+        speed = 1600;
+      } else if (isDeleting && charIndex > 0) {
+        charIndex--;
+      } else {
+        isDeleting = false;
+        textIndex = (textIndex + 1) % typingMessages.length;
+        speed = 350;
+      }
+
+      setTimeout(runTypingEffect, speed);
+    }
+
+    runTypingEffect();
+
+    /* =========================
+       3) TÍNH THỜI GIAN ĐÃ YÊU
+    ========================== */
+    const yearsEl = document.getElementById("years");
+    const monthsEl = document.getElementById("months");
+    const daysEl = document.getElementById("days");
+    const startDateTextEl = document.getElementById("startDateText");
+
+    startDateTextEl.textContent = new Intl.DateTimeFormat("vi-VN", {
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric"
+    }).format(loveStartDate);
+
+    function fixOverflowDay(originalDay, dateObj) {
+      if (dateObj.getDate() !== originalDay) {
+        dateObj.setDate(0);
+      }
+      return dateObj;
+    }
+
+    function addYears(date, years) {
+      const d = new Date(date);
+      const originalDay = d.getDate();
+      d.setFullYear(d.getFullYear() + years);
+      return fixOverflowDay(originalDay, d);
+    }
+
+    function addMonths(date, months) {
+      const d = new Date(date);
+      const originalDay = d.getDate();
+      d.setMonth(d.getMonth() + months);
+      return fixOverflowDay(originalDay, d);
+    }
+
+    function calculateLoveDuration(start, end) {
+      const startDate = new Date(start.getFullYear(), start.getMonth(), start.getDate());
+      const endDate = new Date(end.getFullYear(), end.getMonth(), end.getDate());
+
+      let temp = new Date(startDate);
+      let years = 0;
+      let months = 0;
+
+      while (addYears(temp, 1) <= endDate) {
+        temp = addYears(temp, 1);
+        years++;
+      }
+
+      while (addMonths(temp, 1) <= endDate) {
+        temp = addMonths(temp, 1);
+        months++;
+      }
+
+      const msPerDay = 1000 * 60 * 60 * 24;
+      const days = Math.floor((endDate - temp) / msPerDay);
+
+      return { years, months, days };
+    }
+
+    function updateLoveCounter() {
+      const now = new Date();
+      const result = calculateLoveDuration(loveStartDate, now);
+
+      yearsEl.textContent = result.years;
+      monthsEl.textContent = result.months;
+      daysEl.textContent = result.days;
+    }
+
+    updateLoveCounter();
+    setInterval(updateLoveCounter, 60 * 60 * 1000);
+
+    /* =========================
+       4) RENDER GALLERY
+    ========================== */
+    const galleryGrid = document.getElementById("galleryGrid");
+
+    galleryImages.forEach((item) => {
+      const figure = document.createElement("figure");
+      figure.className = "gallery-item";
+
+      figure.innerHTML = `
+        <img src="${item.src}" alt="${item.caption}" loading="lazy" />
+        <figcaption class="gallery-caption">${item.caption}</figcaption>
+      `;
+
+      galleryGrid.appendChild(figure);
+    });
+
+    /* =========================
+       5) SCROLL REVEAL
+    ========================== */
+    const revealElements = document.querySelectorAll(".reveal");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show", "animate__animated", "animate__fadeInUp");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    revealElements.forEach((el) => observer.observe(el));
+
+    /* =========================
+       6) TIM BAY
+    ========================== */
+    function createFlyingHearts(count = 28) {
+      const icons = ["💖", "💗", "💘", "💕", "💞", "🌸"];
+
+      for (let i = 0; i < count; i++) {
+        const heart = document.createElement("span");
+        heart.className = "heart";
+        heart.textContent = icons[Math.floor(Math.random() * icons.length)];
+
+        heart.style.left = `${Math.random() * 100}vw`;
+        heart.style.fontSize = `${18 + Math.random() * 18}px`;
+        heart.style.animationDuration = `${4 + Math.random() * 3}s`;
+        heart.style.setProperty("--x-move", `${-90 + Math.random() * 180}px`);
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+          heart.remove();
+        }, 7500);
+      }
+    }
+
+    /* =========================
+       7) PHÁO HOA CANVAS
+    ========================== */
+    const canvas = document.getElementById("fireworksCanvas");
+    const ctx = canvas.getContext("2d");
+    let particles = [];
+    let animationId = null;
+
+    function resizeCanvas() {
+      const dpr = window.devicePixelRatio || 1;
+      canvas.width = window.innerWidth * dpr;
+      canvas.height = window.innerHeight * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+
+    resizeCanvas();
+    window.addEventListener("resize", resizeCanvas);
+
+    class Particle {
+      constructor(x, y, color) {
+        const angle = Math.random() * Math.PI * 2;
+        const speed = Math.random() * 5 + 2;
+
+        this.x = x;
+        this.y = y;
+        this.vx = Math.cos(angle) * speed;
+        this.vy = Math.sin(angle) * speed;
+        this.alpha = 1;
+        this.decay = 0.012 + Math.random() * 0.012;
+        this.size = Math.random() * 2.4 + 1.2;
+        this.color = color;
+      }
+
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
+        this.vx *= 0.985;
+        this.vy = this.vy * 0.985 + 0.04;
+        this.alpha -= this.decay;
+      }
+
+      draw() {
+        ctx.save();
+        ctx.globalAlpha = Math.max(this.alpha, 0);
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = this.color;
+        ctx.shadowBlur = 12;
+        ctx.shadowColor = this.color;
+        ctx.fill();
+        ctx.restore();
+      }
+    }
+
+    function createBurst(x, y) {
+      const colors = ["#ff77a8", "#ff9dbb", "#ffd4e3", "#ffffff", "#ffbfd3"];
+      for (let i = 0; i < 60; i++) {
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        particles.push(new Particle(x, y, color));
+      }
+    }
+
+    function animateFireworks() {
+      ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+
+      particles = particles.filter((p) => p.alpha > 0);
+
+      particles.forEach((p) => {
+        p.update();
+        p.draw();
+      });
+
+      if (particles.length > 0) {
+        animationId = requestAnimationFrame(animateFireworks);
+      } else {
+        animationId = null;
+      }
+    }
+
+    function launchFireworks() {
+      const bursts = 6;
+
+      for (let i = 0; i < bursts; i++) {
+        setTimeout(() => {
+          const x = window.innerWidth * (0.15 + Math.random() * 0.7);
+          const y = window.innerHeight * (0.15 + Math.random() * 0.45);
+          createBurst(x, y);
+
+          if (!animationId) {
+            animateFireworks();
+          }
+        }, i * 250);
+      }
+    }
+
+    /* =========================
+       8) NÚT BẤT NGỜ
+    ========================== */
+    const surpriseBtn = document.getElementById("surpriseBtn");
+    const wishMessage = document.getElementById("wishMessage");
+
+    surpriseBtn.addEventListener("click", () => {
+      wishMessage.classList.add("show");
+      wishMessage.classList.remove("animate__zoomIn");
+      void wishMessage.offsetWidth;
+      wishMessage.classList.add("animate__animated", "animate__zoomIn");
+
+      createFlyingHearts(34);
+      launchFireworks();
+
+      surpriseBtn.innerHTML = "Anh yêu em nhiều lắm 💞";
+    });
+  </script>
 </body>
 </html>
